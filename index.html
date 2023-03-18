@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="shortcut icon" href="images/avatar.svg" type="image/x-icon">
+    <title>Products</title>
+</head>
+
+<body>
+    <!-- search input start -->
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Saerch Product">
+            <ion-icon class="search-icon" name="search-circle-outline"></ion-icon>
+        </div>
+    </div>
+    <!-- search input end -->
+
+    <!-- --------------------------------------------- -->
+
+    <div class="container">
+        <h2>trending products</h2>
+        <main>
+            <!-- products cards start -->
+            <section class="products-cards">
+                <!-- <div class="card">
+                    <div class="card-img">
+                        <img src="/images/product-1.png" alt="">
+                    </div>
+
+                    <div class="card-content">
+                        <h3>nike</h3>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+                        <div class="color-switch">
+                            <span>colors:</span>
+                            <div class="colors">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div data-category="shoes" hidden></div>
+                        <p class="instock" data-instock="5">only left 5</p>
+                        <div class="price">
+                            <h5 class="price">$500</h5>
+                            <div class="cart">
+                                <ion-icon name="cart-outline"></ion-icon>
+                                <ion-icon name="star-half-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </section>
+            <!-- products cards end -->
+
+            <!-- --------------------------------------------- -->
+
+            <!-- sidebar start -->
+            <aside class="close">
+                <ul class="sidebar">
+                    <li>
+                        <ion-icon name="star-half-outline"></ion-icon>
+                        <span>Wishlist</span>
+                    </li>
+
+                    <li>
+                        <ion-icon name="wallet-outline"></ion-icon>
+                        <span>Wallet</span>
+                    </li>
+
+                    <li id="cart-toggle">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        <span>Cart</span>
+                    </li>
+
+                    <li>
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <span>Profile</span>
+                    </li>
+
+                    <li id="theme-toggle">
+                        <ion-icon id="dark-icon" name="moon-outline"></ion-icon>
+                        <ion-icon id="light-icon" class="hide" name="sunny-outline"></ion-icon>
+                        <span>dark</span>
+                    </li>
+
+                    <li id="sidebar-toggle">
+                        <div class="arrow">
+                            <ion-icon id="close-arrow" name="arrow-redo-outline"></ion-icon>
+                            <ion-icon id="open-arrow" name="arrow-undo-outline"></ion-icon>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </aside>
+            <!-- sidebar end -->
+
+            <!-- --------------------------------------------- -->
+
+            <!-- cartList start -->
+            <div id="dragable" class="cart-container hide">
+                <div class="cart-list">
+                    <ion-icon id="close-cart" name="close-outline"></ion-icon>
+                    <div class="prod-list">
+
+                        <!-- <div class="prod">
+                            <div class="prod-img"><img src="images/product-1.png"></div>
+                            <div class="prod-info">
+                                <h4>nike miler</h4>
+                                <p>Lorem ipsum dolor sit amet Lorem, ipsum dolor.</p>
+                            </div>
+                            <div class="quantity">
+                                <div class="box">
+                                    <span id="inc">+</span>
+                                </div>
+                                <div class="box">
+                                    <span id="num">2</span>
+                                </div>
+                                <div class="box">
+                                    <span id="min">-</span>
+                                </div>
+                                <span id="del"></span>
+                            </div>
+                        </div> -->
+                        <p class="cart-placeholder">no thing here yet !</p>
+                    </div>
+                    <div class="checkout">
+                        <h4 class="total"></h4>
+                        <button class="btn-checkout">checkout</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- cartList end -->
+
+            <!-- --------------------------------------------- -->
+
+        </main>
+    </div>
+
+    <!-- --------------------------------------------- -->
+
+    <!-- Erorr start -->
+    <div class="error"></div>
+    <!-- Erorr end -->
+
+
+    <script src="./js/main.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
