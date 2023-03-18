@@ -17,7 +17,7 @@ let cart = document.querySelector(".cart-container");
 // load products in HTML
 (async function loadData(callback){
     try{
-        let res = await fetch('/js/data.json');
+        let res = await fetch('./js/data.json');
         let data = await res.json();
 
         // loob through products
