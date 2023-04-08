@@ -188,14 +188,14 @@ function createProductHtml(cardId,prodPrice,img,prodName){
 
 // Retrieve the stored data from localStorage
 
-if(storedCart){
+if(storedCart.length){
     let total = 0;
+    cartPlaceholder.classList.add("hide");
     storedCart.forEach((ele)=>{
         const card = document.getElementById(ele.id);
         const img = card.querySelector("img").src;
         const prodName = card.querySelector("h3").innerText;
         const prodPrice = card.querySelector("h5").innerText;
-        cartPlaceholder.classList.add("hide");
         productsList.innerHTML += createProductHtml(card.id,prodPrice,img,prodName);
         card.querySelector(".add-cart").classList.add("added");
         const products = productsList.querySelectorAll(".prod");
@@ -231,13 +231,16 @@ const cardProducts = document.querySelectorAll(".prod");
                     totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - parseInt(price);             
                 }
             } else if(e.target.classList.contains("delete")){
+                let storedCart = JSON.parse(localStorage.getItem("myCart"));
                 let ind = storedCart.findIndex((cart)=>cart.id == ele.dataset.id);
-                console.log(storedCart[ind].quantity);
+                let card = document.getElementById(ele.dataset.id);
+                let icon = card.querySelector(".add-cart")
                 let price = ele.querySelector(".prod-info p").innerHTML;
                 totalPrice.innerHTML = parseInt(totalPrice.innerHTML) - (parseInt(price) * storedCart[ind].quantity);             
                 storedCart.splice(ind,1);
                 localStorage.setItem("myCart",JSON.stringify(storedCart));
                 ele.remove();
+                icon.classList.remove("added")
             } 
         })
     })
